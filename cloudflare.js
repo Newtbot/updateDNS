@@ -28,27 +28,6 @@ class CloudFlare {
 		}
 	}
 
-	//To get DNS RECORD ID.
-	// async getAllDNS(){
-
-	//     try {
-	//         const options = {
-	//         method: 'GET',
-	//         url: `${this.baseUrl}${this.zoneId}/dns_records`,
-	//         headers: {
-	//                 'Content-Type': 'application/json',
-	//                 'Authorization': "Bearer " + this.apiToken
-	//             }
-	//         };
-	//         let cfRes = await axios.request(options)
-	//         console.log(cfRes.data.result)
-
-	//     } catch (error) {
-	//         console.log(error.response); // this is the main part. Use the response property from the error object
-	//     }
-
-	// }
-
 	//Use as helper by compareIp()
 	async getIP() {
 		try {
@@ -59,6 +38,7 @@ class CloudFlare {
 			console.log(error.response);
 		}
 	}
+
 	async getDNS(domainName) {
 		try {
 			const subDomain = domainName.split('.')[0];
@@ -134,3 +114,23 @@ if (require.main === module) {
 	})();
 }
 
+	//To get DNS RECORD ID.
+	// async getAllDNS(){
+
+	//     try {
+	//         const options = {
+	//         method: 'GET',
+	//         url: `${this.baseUrl}${this.zoneId}/dns_records`,
+	//         headers: {
+	//                 'Content-Type': 'application/json',
+	//                 'Authorization': "Bearer " + this.apiToken
+	//             }
+	//         };
+	//         let cfRes = await axios.request(options)
+	//         console.log(cfRes.data.result)
+
+	//     } catch (error) {
+	//         console.log(error.response); // this is the main part. Use the response property from the error object
+	//     }
+
+	// }
