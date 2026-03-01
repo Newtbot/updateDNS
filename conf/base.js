@@ -8,8 +8,8 @@ module.exports = {
 			apiToken: "__secrets.js__",
 		},
 
-		proxy: {
-			domain: "proxy.teeseng.uk",
+		vaultwarden: {
+			domain: "vaultwarden.teeseng.uk",
 			cloudflareDnsId: "149403c78d119aecdfcde0bc97998b8e",
 			zoneId: "11f8ec3c2ff0530fe6f1b97dfe4b8f74",
 			baseUrl: "https://api.cloudflare.com/client/v4/zones/",
